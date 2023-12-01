@@ -26,6 +26,5 @@ data "azurerm_subnet" "subnet" {
   name                 = "justint-subnet"
   virtual_network_name = "justint-subnet-vnet"
   resource_group_name  = "justint-workshop"
-  }  
-}
+}  
 
