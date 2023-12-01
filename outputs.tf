@@ -1,6 +1,5 @@
 output "id" {
-  value = data.tfe_outputs.myresourcegroup.values
-  sensitive = false
+  value = data.tfe_outputs.myresourcegroup.id
 }
 
 output "location" {
