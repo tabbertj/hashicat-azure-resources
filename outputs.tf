@@ -1,5 +1,5 @@
 output "id" {
-  value = data.azurerm_resource_group.myresourcegroup.name
+  value = data.tfe_outputs.myresourcegroup.name
 }
 
 output "location" {
