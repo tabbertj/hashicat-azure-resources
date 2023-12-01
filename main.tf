@@ -40,7 +40,7 @@ data "tfe_outputs" "subnet_id" {
 resource "azurerm_virtual_network" "vnet1" {
   name                = "justint-vnet1"
   location            = "canadacentral"
-  address_space       = "10.1.0.0/24"
+  address_space       = "10.0.0.0/16"
   resource_group_name = data.tfe_outputs.subnet_id.values.id
   tags = {
     environment = "Production"
