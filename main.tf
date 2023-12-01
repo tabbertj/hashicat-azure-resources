@@ -23,10 +23,9 @@ data "azurerm_resource_group" "myresourcegroup" {
 }
 
 data "azurerm_subnet" "subnet" {
-  most_recent = true
-  filter {
-    name   = "name"
-    values = ["justint-*"]
-   }
+  name                 = "justint-subnet"
+  virtual_network_name = "justint-subnet-vnet"
+  resource_group_name  = "justint-workshop"
+  }  
 }
 
