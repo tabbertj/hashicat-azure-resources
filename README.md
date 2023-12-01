@@ -1,0 +1,1 @@
+# hashicat-azure-resources
