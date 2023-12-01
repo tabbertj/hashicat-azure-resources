@@ -10,3 +10,6 @@ output "tags" {
   value = data.azurerm_resource_group.myresourcegroup.tags
 }
 
+output "subnet_id" {
+  value = data.azurerm_subnet.subnet.id
+}
