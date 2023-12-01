@@ -1,5 +1,5 @@
 output "id" {
-  id = data.tfe_outputs.myresourcegroup.values.id
+  value = data.tfe_outputs.myresourcegroup.values
 }
 
 output "location" {
