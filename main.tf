@@ -18,6 +18,15 @@ provider "azurerm" {
   }
 }
 
+terraform {
+  required_providers {
+    tfe = {
+      source = "hashicorp/tfe"
+      version = "0.50.0"
+    }
+  }
+}
+
 data "azurerm_resource_group" "myresourcegroup" {
   name = "justint-workshop"
 }
@@ -27,4 +36,13 @@ data "azurerm_subnet" "subnet" {
   virtual_network_name = "justint-vnet"
   resource_group_name  = "justint-workshop"
 }  
+
+data "tfe_outputs" "myresourcegroup" {
+  organization = "JustinTabbert-training"
+  workspace = "hashicat-azure"
+}
+
+resource "azurerm_resource_group" "myresourcegroup" {
+    id = data.tfe_outputs.myresourcegroup.values.name
+}
 
