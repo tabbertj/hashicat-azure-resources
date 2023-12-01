@@ -27,5 +27,6 @@ data "azurerm_subnet" "subnet" {
   filter {
     name   = "name"
     values = ["justint-*"]
+   }
 }
 
