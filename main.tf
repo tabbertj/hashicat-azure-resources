@@ -7,6 +7,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = ">=3.41.0"
     }
+    tfe = {
+      source = "hashicorp/tfe"
+      version = "0.50.0"
+    }
   }
 }
 
@@ -14,15 +18,6 @@ provider "azurerm" {
   features {
     resource_group {
       prevent_deletion_if_contains_resources = false
-    }
-  }
-}
-
-terraform {
-  required_providers {
-    tfe = {
-      source = "hashicorp/tfe"
-      version = "0.50.0"
     }
   }
 }
