@@ -19,6 +19,13 @@ provider "azurerm" {
 }
 
 data "azurerm_resource_group" "myresourcegroup" {
-  name = "canadacentral-workshop"
+  name = "justint-workshop"
+}
+
+data "azurerm_subnet" "subnet" {
+  most_recent = true
+  filter {
+    name   = "name"
+    values = ["justint-*"]
 }
 
