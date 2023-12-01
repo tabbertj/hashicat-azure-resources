@@ -1,5 +1,5 @@
 output "id" {
-  value = data.tfe_outputs.test.subnet_id.values
+  value = data.tfe_outputs.subnet_id.values
 }
 
 output "location" {
