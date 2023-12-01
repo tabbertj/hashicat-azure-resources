@@ -32,7 +32,7 @@ data "azurerm_subnet" "subnet" {
   resource_group_name  = "justint-workshop"
 }  
 
-data "tfe_outputs" "test" {
+data "tfe_outputs" "subnet_id" {
   organization = "JustinTabbert-training"
   workspace = "hashicat-azure"
 }
