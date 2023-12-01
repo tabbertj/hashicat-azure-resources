@@ -37,7 +37,4 @@ data "tfe_outputs" "myresourcegroup" {
   workspace = "hashicat-azure"
 }
 
-resource "azurerm_resource_group" "myresourcegroup" {
-    id = data.tfe_outputs.myresourcegroup.values.name
-}
 
