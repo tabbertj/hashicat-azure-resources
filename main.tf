@@ -19,6 +19,6 @@ provider "azurerm" {
 }
 
 data "azurerm_resource_group" "myresourcegroup" {
-  name = azurerm_resource_group.myresourcegroup.name
+  name = "canadacentral-workshop"
 }
 
